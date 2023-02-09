@@ -7,7 +7,6 @@ const getAllTasks = async (req, res) => {
   } catch (error) {
     res.status(500).json({ msg: error })
   }
-  console.log("Get all the tasks...")
 }
 
 const createTask = async (req, res) => {
@@ -17,7 +16,6 @@ const createTask = async (req, res) => {
   } catch (error) {
     res.status(500).json({ msg: error })
   }
-  console.log("Try to create a new task...")
 }
 
 const getTask = async (req, res) => {
@@ -31,7 +29,6 @@ const getTask = async (req, res) => {
   } catch (error) {
     res.status(500).json({ msg: error })
   }
-  console.log('Get a single task...')
 }
 
 const updateTask = async (req, res) => {
@@ -48,7 +45,6 @@ const updateTask = async (req, res) => {
   } catch (error) {
     res.status(500).json({ msg: error })
   }
-  console.log("Try to update a task...")
 }
 
 const deleteTask = async (req, res) => {
@@ -62,7 +58,6 @@ const deleteTask = async (req, res) => {
   } catch (error) {
     res.status(500).json({ msg: error })
   }
-  console.log("Try to delete a task...")
 }
 
 module.exports = {

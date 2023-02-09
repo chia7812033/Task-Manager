@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const logger = require('morgan')
 const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 require('dotenv').config()
@@ -7,6 +8,7 @@ require('dotenv').config()
 // middleware
 app.use(express.static('./public'))
 app.use(express.json())
+app.use(logger('tiny'));
 
 // routes
 app.get('/', (req, res) => {
